@@ -1,6 +1,7 @@
 package Map;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Cars {
     public static void main(String[] args) {
@@ -10,7 +11,9 @@ public class Cars {
         cars.put("Mercedes",1996);
         cars.put("Honda",2006);
         cars.put("Subaru",2003);
-        System.out.println(cars.keySet());
-        System.out.println(cars.values());
+        System.out.println("Марка:" + "Год выпуска:");
+        for (Map.Entry<String, Integer> entry : cars.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
     }
 }
